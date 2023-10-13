@@ -11,21 +11,21 @@ app.get("/add", function (req, res) {
   const num01 = Number(req.query.param1);
   const num02 = Number(req.query.param2);
   const result = num01 + num02;
-  res.status(200).send(`Result: ${result}`);
+  res.status(200).send(`${result}`);
 });
 
 app.get("/multiply", function (req, res) {
   const num01 = Number(req.query.param1);
   const num02 = Number(req.query.param2);
   const result = num01 * num02;
-  res.status(200).send(`Result: ${result}`);
+  res.status(200).send(`${result}`);
 });
 
 app.get("/sub", function (req, res) {
   const num01 = Number(req.query.param1);
   const num02 = Number(req.query.param2);
   const result = num01 - num02;
-  res.status(200).send(`Result: ${result}`);
+  res.status(200).send(`${result}`);
 });
 
 app.get("/div", function (req, res) {
@@ -36,7 +36,7 @@ app.get("/div", function (req, res) {
     res.status(400).send("Cannot divide by zero");
   } else {
     const result = num01 / num02;
-    res.status(200).send(`Result: ${result}`);
+    res.status(200).send(`${result}`);
   }
 });
 
